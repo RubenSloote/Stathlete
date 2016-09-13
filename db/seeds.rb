@@ -28,3 +28,9 @@ Team.delete_all
 Team.create(name:"Thunder")
 Team.create(name:"Cavs")
 Team.create(name:"Clippers")
+
+Stat.delete_all
+
+Stat.create(name:"points", value:25)
+Stat.create(name:"rebounds", value:12)
+Stat.create(name:"assists", value:9)
