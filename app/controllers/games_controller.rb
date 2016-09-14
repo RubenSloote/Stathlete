@@ -9,9 +9,12 @@ class GamesController < ApplicationController
     @players = Player.all
   end
 
+  def new
+    @game = Game.new
+  end
+
   def create
-    @game = Game.find(params[:game_id])
-    game_params = params.require( :game ).permit( :name)
+    game_params = params.require( :game ).permit( :title)
 
     @game = Game.new( game_params )
 

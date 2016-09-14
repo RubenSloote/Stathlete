@@ -1,4 +1,5 @@
-<%= form_for ([@game.player.new]) do |f| %>
+
+<%= form_for ([@game.players.new]) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.submit "create" %>

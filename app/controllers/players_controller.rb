@@ -18,9 +18,10 @@ class PlayersController < ApplicationController
     @player = Player.new( player_params )
 
     if @player.save
-      redirect_to game_path(@game)
+      redirect_to player_path(@game_id)
     else
       render '_form'
     end
   end
+
 end
