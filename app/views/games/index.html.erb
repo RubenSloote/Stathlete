@@ -1,5 +1,7 @@
 <h1>Games</h1>
-
+<hr>
 <% @games.each do |game| %>
   <p><%= link_to game.title, game_path(game.id) %></p>
 <% end %>
+
+<%= link_to "New Game", new_game_path %>

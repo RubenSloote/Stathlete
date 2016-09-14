@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Player.delete_all
-Coach.delete_all
-Game.delete_all
-Team.delete_all
-Stat.delete_all
+# Stat.delete_all
+# Team.delete_all
+# Game.delete_all
+# Coach.delete_all
+# Player.delete_all
 
 russel = Player.create([
   {name:"Russel"}, {image:"http://img.bleacherreport.net/img/images/photos/003/570/165/hi-res-39042215448e6d76b78bcba00c373101_crop_north.jpg?w=630&h=420&q=75"}])
