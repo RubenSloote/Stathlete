@@ -1,13 +1,12 @@
 <h1><%= @game.title %></h1>
 <hr>
 
-<% @game.players.each do |player| %>
-  <p><%= player.name %></p>
-<% end %>
+<%= render 'players/index' %>
 
 <hr>
 
 <%= render 'players/form' %>
 
 <hr>
+
 <%= link_to "Back", games_path %>

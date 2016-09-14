@@ -8,15 +8,19 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
   end
 
-  # def create
-  #   player_params = params.require( :player ).permit( :title)
-  #
-  #   @player = Player.new( player_params )
-  #
-  #   if @player.save
-  #     redirect_to @game
-  #   else
-  #     render 'new'
-  #   end
-  # end
+  def new
+
+  end
+
+  def create
+    player_params = params.require( :player ).permit( :name)
+
+    @player = Player.new( player_params )
+
+    if @player.save
+      redirect_to game_path(@game)
+    else
+      render '_form'
+    end
+  end
 end
