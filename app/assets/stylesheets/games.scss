@@ -5,3 +5,53 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
+.games {
+  padding: 50px;
+  padding-bottom: 100px;
+  color: #a0a3aa;
+}
+
+.games a {
+    color: #a0a3aa;
+    text-decoration: none;
+}
+
+
+.game-button {
+  float: none;;
+}
+
+
+.game-table {
+  margin: 20px;
+  border: 0px;
+}
+
+.game-table td {
+  padding: 10px;
+  border: 0px;
+}
+ .game-table p {
+   font-size: 150%;
+ }
+
+input[type = text] {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #f7f7f9;
+  border: none;
+  border-bottom: 1px solid #a0a3aa;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  color: #a0a3aa;
+  background-color: #f7f7f9;
+  border: 2px solid #ba9a55;
+  border-radius: 3px;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  float: right;
+}

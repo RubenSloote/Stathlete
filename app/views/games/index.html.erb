@@ -1,8 +1,16 @@
-<h1>Games</h1>
-<%= link_to "New Game", new_game_path %>
-<hr>
-<% @games.each do |game| %>
-  <p><%= link_to game.title, game_path(game.id) %></p>
-  <%= link_to "delete", game_path(game.id), method: :delete, data: { confirm: "Are  you sure?"} %>
-<% end %>
-<hr>
+<div class="games">
+
+  <h1>Games</h1>
+  <button class="game-button"><%= link_to "New Game", new_game_path %></button>
+
+  <table class="game-table">
+    <% @games.each do |game| %>
+    <td>
+      <p><%= link_to game.title, game_path(game.id) %></p>
+      <%= link_to "delete", game_path(game.id), method: :delete, data: { confirm: "Are  you sure?"} %>
+      <% end %>
+    </td>
+  </table>
+
+
+</div>
