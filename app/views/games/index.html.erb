@@ -1,8 +1,8 @@
 <h1>Games</h1>
+<%= link_to "New Game", new_game_path %>
 <hr>
 <% @games.each do |game| %>
   <p><%= link_to game.title, game_path(game.id) %></p>
   <%= link_to "delete", game_path(game.id), method: :delete, data: { confirm: "Are  you sure?"} %>
 <% end %>
 <hr>
-<%= link_to "New Game", new_game_path %>

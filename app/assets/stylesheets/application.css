@@ -13,3 +13,58 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  background-color: #055f72;
+}
+
+.main-body {
+  margin: 50px;
+  background-color: #f7f7f9;
+}
+
+
+
+header {
+  height: 280px;
+  font-family: 'Audiowide', cursive;
+  background-image: url(http://media.ussportscamps.com/assets/programs/nbc-camps/main-photos/nbc-basketball-camp-header.jpg);
+  background-position: center;;
+  font-size: 250%;
+
+}
+
+ header h1 {
+   color: #f7f7f9;
+ }
+
+
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f7f7f9;
+  border-bottom: 1px solid #ba9a55;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navbar li {
+  float: left
+}
+
+.navbar li a {
+  display: block;
+  color: #a0a3aa;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #ba9a55;
+  color: #f7f7f9;
+}

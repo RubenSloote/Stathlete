@@ -1,0 +1,11 @@
+<h1>Stats</h1>
+
+<%= link_to "Add stat", new_stat_path %>
+<hr>
+<% @stats.each do |stat| %>
+  <p><%= stat.name %></p>
+  <%= link_to "delete", stat_path(stat.id), method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %>
+
+<hr>
+<%= link_to "next", games_path %>

@@ -6,9 +6,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main-body">
+      <header>
+        <h1>Stathlete</h1>
+      </header>
+
+      <div class="navbar">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Games", games_path %></li>
+          <li><%= link_to "Players", players_path %></li>
+          <li><%= link_to "Stats", stats_path %></li>
+        </ul>
+      </div>
+
+
+      <%= yield %>
+    </div>
   </body>
 </html>
