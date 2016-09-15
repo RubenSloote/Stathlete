@@ -1,29 +1,24 @@
 <div class="players">
 
-
   <h1>Players</h1>
 
+  <%= form_for @player do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Add" %>
+  <% end %>
 
-  <%= link_to "add player", new_player_path %>
 
-  <table>
-    <tr>
-      <% @players.each do |player| %>
+  <table class="table">
+    <% @players.each do |player| %>
+    <td>
       <p><%= player.name %></p>
       <%= link_to "delete", player_path(player.id), method: :delete, data: {confirm: "Are you sure?"} %>
-    </tr>
+      <% end %>
+    </td>
   </table>
-  <% end %>
 
-
-
-  <%= link_to "next", stats_path %>
-
-  <%= form_for @player do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%= f.submit "Add" %>
-  <% end %>
+<button><%= link_to "next", stats_path %></button>
 
 
 </div>
