@@ -2,6 +2,9 @@
 <hr>
 <% @players.each do |player| %>
   <p><%= link_to player.name, player_path(player.id)  %></p>
+  <%= link_to "delete", player_path(player.id), method: :delete, data: {confirm: "Are you sure?"} %>
 <% end %>
+
+<hr>
 
 <%= link_to "add player", new_player_path %>
