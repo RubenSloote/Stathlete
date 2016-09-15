@@ -1,0 +1,23 @@
+<div class="players">
+
+  <h1>Add Players</h1>
+
+  <%= form_for @player do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Add" %>
+  <% end %>
+
+
+  <table class="table">
+    <% @players.each do |player| %>
+    <td>
+      <p><%= player.name %></p>
+      <%= link_to "delete", player_path(player.id), method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
+    </td>
+  </table>
+
+<button><%= link_to "next", stats_path %></button>
+
+
+</div>

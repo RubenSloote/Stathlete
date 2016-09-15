@@ -20,9 +20,19 @@ class GamesController < ApplicationController
     @game = Game.new( game_params )
 
     if @game.save
-      redirect_to @game
+      redirect_to players_path
     else
       render 'new'
     end
   end
+
+  def destroy
+    @game = Game.find(params[:id])
+
+    @game.destroy
+
+    redirect_to games_path
+  end
+
+
 end

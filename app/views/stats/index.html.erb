@@ -1,0 +1,21 @@
+<div class="games">
+
+  <h1>Add Stats</h1>
+  <%= form_for @stat do |f| %>
+      <%= f.text_field :name %>
+      <%= f.submit "Add" %>
+  <% end %>
+
+  <table class="game-table">
+    <% @stats.each do |stat| %>
+    <td>
+      <p><%= stat.name %></p>
+      <%= link_to "delete", stat_path(stat.id), method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
+    </td>
+  </table>
+
+  <button><%= link_to "next", games_path %></button>
+
+
+</div>

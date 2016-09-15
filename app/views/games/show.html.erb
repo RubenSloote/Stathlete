@@ -1,35 +1,32 @@
-<h1><%= @game.title %></h1>
-
-<hr>
-
-<%= render 'players/form' %>
-
-<hr>
+<div class="games">
+  <h1><%= @game.title %></h1>
 
 
 
-<table style="width:80%">
-  <tr>
-    <th>Player Name</th>
-    <% @stats.each do |stat| %>
-    <th>
-        <p><%= stat.name %></p>
-      <% end %>
-    </th>
-  </tr>
-  <% @players.each do |player| %>
-  <tr>
-    <td>
-      <%= player.name %>
-    </td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <% end %>
-  </tr>
-</table>
+
+  <table style="width:80%">
+    <tr>
+      <th>Player Name</th>
+      <% @stats.each do |stat| %>
+      <th>
+          <p><%= stat.name %></p>
+        <% end %>
+      </th>
+    </tr>
+    <% @players.each do |player| %>
+    <tr>
+      <td>
+        <%= player.name %>
+      </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <% end %>
+    </tr>
+  </table>
 
 
-<hr>
+  <button class="back"><%= link_to "Back", games_path %></button>
 
-<%= link_to "Back", games_path %>
+
+</div>
